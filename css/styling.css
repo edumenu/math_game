@@ -1,0 +1,163 @@
+body{
+    background-image: url('images/arabesque.png');
+    background-color: #AA1B15; 
+}
+
+.container{
+    height: 530px;
+    width: 600px;
+    background-color: #B6B6B6;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 2px 2px;
+    -moz-box-shadow: 0px 4px 2px 2px;
+    -webkit-box-shadow: 0px 4px 2px 2px;
+    position: relative;
+}
+
+/*Score box*/
+#score{
+    background: #f3fbf3;
+    color: darkred;
+    padding: 10px;
+    position: absolute;
+    border-radius: 5px;
+    left: 500px;
+    box-shadow: 0px 4px #005b00;
+    -moz-box-shadow: 0px 4px #005b00;
+    -webkit-box-shadow: 0px 4px #005b00;
+}
+
+/*Correct message*/
+#correct{
+    position: absolute; /*This position is based on the first relative positon*/
+    left: 250px;
+    background-color: #2bb42b;
+    color: aliceblue;
+    padding: 11px;
+    display: none;
+}
+
+/*Wrong message*/
+#wrong{
+    position: absolute; /*This position is based on the first relative positon*/
+    left: 250px;
+    background-color: #ef0000;
+    color: aliceblue;
+    padding: 11px;
+    display: none;
+}
+
+/*Question box*/
+#question{
+    width: 550px;
+    height: 150px;
+    margin: 60px auto 10px auto;
+    background-color: #f4f4f4;
+    box-shadow: 0px 2px;
+    -moz-box-shadow: 0px 2px;
+    -webkit-box-shadow: 0px 2px;
+    font-size: 50px;
+    text-align: center;
+    font-family: cursive, sans-serif;
+    color: black;
+    
+}
+
+#instruction{
+    width: 300px;
+    background-color: #11a2fc;
+    margin: 10px auto;
+    border-radius: 10px;
+    color: aliceblue;
+    line-height: 40px;
+    box-shadow: 0px 2px black;
+    -moz-box-shadow: 0px 2px black;
+    -webkit-box-shadow: 0px 2px black;
+}
+
+#choices{
+ height: 120px;
+ width: 550px;
+ margin: 5px auto; 
+ padding: 1px 21px;
+ margin-right: 1px;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    margin: 10px auto;
+    float: left;
+    margin-right: 27px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0,0,0,0.2);
+    font-size: 30px;
+    transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+}
+
+.box:active, #startReset:active{
+    box-shadow: 0px 0px #161616;
+    -moz-box-shadow: 0px 0px #161616;
+    -webkit-box-shadow: 0px 0px #161616;
+    bottom: 3px;
+    position: relative;
+}
+
+#startReset{
+   height: 50px;
+   margin: 10px 220px;
+   border-radius: 10px; 
+   text-align: center;
+   position: relative;
+   box-shadow: 0px 4px rgba(0,0,0,0.2);
+   transition: all 0.4s;
+   -o-transition: all 0.4s;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   -ms-transition: all 0.4s;    
+}
+
+/*Time remaining box*/
+#timeRemaining{
+    width: 190px;
+    padding: 10px;
+    top: 455px;
+    left: 390px;
+    position: absolute;
+    background-color: rgba(181, 235,36, 0.7);
+    border-radius: 10px;
+     box-shadow: 0px 2px rgba(181, 235,36, 0.7);
+    -moz-box-shadow: 0px rgba(181, 235,36, 0.7);
+    -webkit-box-shadow: 0px 2px rgba(0,0,0, 0.2);
+/*    visibility: hidden;*/
+    display: none; 
+}
+
+#gameOver{
+    height: 200px;
+    width: 480px;
+    color: aliceblue;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 150px;
+    left: 60px;
+    z-index: 2;
+    background: rgba(169,3,41,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+    display: none;
+}

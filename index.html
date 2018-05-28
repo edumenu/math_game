@@ -1,1 +1,72 @@
-<head></head>
+<!--
+Created by: Edem Dumenu
+Date: 5/25/2018
+Description:
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Math Game</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable=yes>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/styling.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+    <!-- Main container -->
+    <div class="container">
+     
+      <!-- Score -->
+      <div id='score'>
+          Score: <span id='scorevalue'>0</span>
+      </div>
+      <!--/score -->
+      
+      <!-- Correct -->
+      <div id='correct' class="alert alert-success"><strong>Correct!</strong></div>
+      
+      <!-- Wrong -->
+      <div id='wrong' class="alert alert-success"><strong>Try again</strong></div>
+      
+      <!-- Question box -->
+      <div id="question"> How old are you?</div>
+      
+      <!-- Instruction box -->
+      <div id="instruction" class="alert alert-success text-center"> Click on the correct answer</div>
+      
+      <!-- Choices box -->
+      <div id="choices">
+          <button id="box1" class="btn btn-info box"></button>
+          <button id="box2" class="btn btn-info box"></button>
+          <button id="box3" class="btn btn-info box"></button>
+          <button id="box3" class="btn btn-info box"></button>
+      </div>
+      
+      <!-- Start/Reset -->
+      <button id='startReset' class="btn btn-primary">
+          Start Game
+      </button>
+      
+      <!-- Time remaining box -->
+      <div id="timeRemaining">
+          Time remaining: <span id="timeremainingValue">60</span>secs
+      </div>
+      
+      <!-- Game over box -->
+      <div id="gameOver">
+<!--
+          <p>Game Over!</p>
+          <p>Your score is 20!</p>
+-->
+      </div>
+      
+    </div>
+    <!-- /Main container -->
+
+    </body>
+
+</html>
