@@ -1,32 +1,36 @@
 body{
-    background-image: url('images/arabesque.png');
-    background-color: #AA1B15; 
+    background-image: url('images/pattern_texture1190.jpg');
+    background-color: #AB3334; 
 }
 
-.container{
-    height: 530px;
+/*Container for the game*/
+.container1{
+    height: 560px;
     width: 600px;
-    background-color: #B6B6B6;
+    background: rgba(0,0,0,0.6);
     margin: 100px auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 2px 2px;
-    -moz-box-shadow: 0px 4px 2px 2px;
-    -webkit-box-shadow: 0px 4px 2px 2px;
+    border-radius: 15px;
+    box-shadow: 0px 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 4px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 4px rgba(0,0,0,0.2);
     position: relative;
 }
 
 /*Score box*/
 #score{
-    background: #f3fbf3;
+    width: 20%;
+    background: #B6B6B6;
     color: darkred;
     padding: 10px;
+    margin: 10px auto;
     position: absolute;
     border-radius: 5px;
-    left: 500px;
-    box-shadow: 0px 4px #005b00;
-    -moz-box-shadow: 0px 4px #005b00;
-    -webkit-box-shadow: 0px 4px #005b00;
+    left: 450px;
+    box-shadow: 0px 3px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 3px rgba(0,0,0,0.6);
+    display: none;
 }
 
 /*Correct message*/
@@ -51,32 +55,34 @@ body{
 
 /*Question box*/
 #question{
-    width: 550px;
+    width: 90%;
     height: 150px;
-    margin: 60px auto 10px auto;
-    background-color: #f4f4f4;
-    box-shadow: 0px 2px;
-    -moz-box-shadow: 0px 2px;
-    -webkit-box-shadow: 0px 2px;
+    margin: 80px auto 10px auto;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    box-shadow: 0px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 3px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 3px rgba(0,0,0,0.2);
     font-size: 50px;
     text-align: center;
-    font-family: cursive, sans-serif;
     color: black;
-    
+    z-index: 2px;
 }
 
+/*Instruction box*/
 #instruction{
     width: 300px;
-    background-color: #11a2fc;
+    background-color: #B6B6B6;
     margin: 10px auto;
     border-radius: 10px;
-    color: aliceblue;
+    color: black;
     line-height: 40px;
-    box-shadow: 0px 2px black;
-    -moz-box-shadow: 0px 2px black;
-    -webkit-box-shadow: 0px 2px black;
+    box-shadow: 0px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 3px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 3px rgba(0,0,0,0.2);
 }
 
+/*List of answers (answer boxes)*/
 #choices{
  height: 120px;
  width: 550px;
@@ -85,10 +91,13 @@ body{
  margin-right: 1px;
 }
 
+/*Answer boxes*/
 .box{
     height: 100px;
     width: 100px;
     margin: 10px auto;
+    background-color: #8F0000;
+    border-color: #B90101;
     float: left;
     margin-right: 27px;
     border-radius: 30px;
@@ -102,7 +111,17 @@ body{
     -ms-transition: all 0.4s;
 }
 
-.box:active, #startReset:active{
+/*When an answer box is selected*/
+.box:active{
+    border-color: black;
+    box-shadow: 0px 0px #161616;
+    -moz-box-shadow: 0px 0px #161616;
+    -webkit-box-shadow: 0px 0px #161616;
+    bottom: 3px;
+    position: relative;
+}
+/*When the start reset button is selected*/
+#startReset:active{
     box-shadow: 0px 0px #161616;
     -moz-box-shadow: 0px 0px #161616;
     -webkit-box-shadow: 0px 0px #161616;
@@ -110,6 +129,13 @@ body{
     position: relative;
 }
 
+/*When you hover an answer box*/
+.box:hover{
+    background-color: #690000;
+    border-color: #820000;
+}
+
+/*Start/Reset button*/
 #startReset{
    height: 50px;
    margin: 10px 220px;
@@ -117,6 +143,8 @@ body{
    text-align: center;
    position: relative;
    box-shadow: 0px 4px rgba(0,0,0,0.2);
+   background-color: #004AC8;
+   border-color: #002666;
    transition: all 0.4s;
    -o-transition: all 0.4s;
    -webkit-transition: all 0.4s;
@@ -124,11 +152,16 @@ body{
    -ms-transition: all 0.4s;    
 }
 
+/*Start/Reset button hover*/
+#startReset:hover{
+  background-color: #003692;     
+}
+
 /*Time remaining box*/
 #timeRemaining{
     width: 190px;
     padding: 10px;
-    top: 455px;
+    top: 475px;
     left: 390px;
     position: absolute;
     background-color: rgba(181, 235,36, 0.7);
@@ -137,9 +170,10 @@ body{
     -moz-box-shadow: 0px rgba(181, 235,36, 0.7);
     -webkit-box-shadow: 0px 2px rgba(0,0,0, 0.2);
 /*    visibility: hidden;*/
-    display: none; 
+     display: none; 
 }
 
+/*Gameover box*/
 #gameOver{
     height: 200px;
     width: 480px;

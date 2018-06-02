@@ -18,11 +18,11 @@ Description:
 
     <body>
     <!-- Main container -->
-    <div class="container">
+    <div class="container1">
      
       <!-- Score -->
       <div id='score'>
-          Score: <span id='scorevalue'>0</span>
+          Score: <span id='scorevalue'></span>
       </div>
       <!--/score -->
       
@@ -33,17 +33,17 @@ Description:
       <div id='wrong' class="alert alert-success"><strong>Try again</strong></div>
       
       <!-- Question box -->
-      <div id="question"> How old are you?</div>
+      <div id="question">Click start to begin!</div>
       
       <!-- Instruction box -->
-      <div id="instruction" class="alert alert-success text-center"> Click on the correct answer</div>
+      <div id="instruction" class="alert alert-success text-center"> Select the correct answer</div>
       
       <!-- Choices box -->
       <div id="choices">
-          <button id="box1" class="btn btn-info box"></button>
-          <button id="box2" class="btn btn-info box"></button>
-          <button id="box3" class="btn btn-info box"></button>
-          <button id="box3" class="btn btn-info box"></button>
+          <button id="box1" class="btn btn-danger box"></button>
+          <button id="box2" class="btn btn-danger box"></button>
+          <button id="box3" class="btn btn-danger box"></button>
+          <button id="box4" class="btn btn-danger box"></button>
       </div>
       
       <!-- Start/Reset -->
@@ -53,20 +53,19 @@ Description:
       
       <!-- Time remaining box -->
       <div id="timeRemaining">
-          Time remaining: <span id="timeremainingValue">60</span>secs
+          Time remaining: <span id="timeremainingValue">60</span> secs
       </div>
       
       <!-- Game over box -->
       <div id="gameOver">
-<!--
-          <p>Game Over!</p>
-          <p>Your score is 20!</p>
--->
+       
       </div>
       
     </div>
     <!-- /Main container -->
 
+    <!-- Javascript file -->
+    <script src="js/script.js"></script>   
     </body>
 
 </html>
